@@ -1,4 +1,4 @@
-#### WELCOME DUELIST ####
+### `WELCOME DUELIST` ###
 
 This is a very short project that has been developed in less than a week! 
 
@@ -13,10 +13,6 @@ Inside every component there's documentation in case the code was difficult to u
 In the project directory, you can run:
 
 ### `npm start or yarn start`
-
-These Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 
 ## How to Interact as a User.
 
