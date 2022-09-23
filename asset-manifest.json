@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yu-gi-oh_cards/static/css/main.ed314df8.css",
+    "main.js": "/yu-gi-oh_cards/static/js/main.ad5472aa.js",
+    "index.html": "/yu-gi-oh_cards/index.html",
+    "main.ed314df8.css.map": "/yu-gi-oh_cards/static/css/main.ed314df8.css.map",
+    "main.ad5472aa.js.map": "/yu-gi-oh_cards/static/js/main.ad5472aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed314df8.css",
+    "static/js/main.ad5472aa.js"
+  ]
+}
