@@ -3,7 +3,6 @@
  * The component ButtonView triggers an event that is received from CardsLogic component and CardsInfo renders the information.
  */
 
-
 import { Row, Col }from 'react-bootstrap/';
 import Cards from './Cards'
 import ListsView from './ListsView'

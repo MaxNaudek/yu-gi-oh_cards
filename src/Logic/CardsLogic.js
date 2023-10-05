@@ -2,15 +2,14 @@
  * This component contains all the logic that is distributed along the comunication process from other components.
  * It also renders the information that is assambled together in a JSX.
  */
-
-import { useEffect, useState } from 'react'; 
-import { Container, Row, Pagination }from 'react-bootstrap/';
-import HeaderYugi from '../Components/HeaderYugi'
-import Paginations from '../Components/Pagination'
-import ErrorMessage from '../Components/ErrorMessage'
-import NumberComponent from '../Components/NumberComponent'
-import CardsInfo from '../Components/CardsInfo'
-import ButtonView from '../Components/ButtonView'
+import { useEffect, useState } from 'react';
+import { Container, Pagination, Row } from 'react-bootstrap/';
+import ButtonView from '../Components/ButtonView';
+import CardsInfo from '../Components/CardsInfo';
+import ErrorMessage from '../Components/ErrorMessage';
+import HeaderYugi from '../Components/HeaderYugi';
+import NumberComponent from '../Components/NumberComponent';
+import Paginations from '../Components/Pagination';
 
 function CardsLogic() {
    
@@ -35,13 +34,14 @@ function CardsLogic() {
       setitemsperPage(()=>50);
       setMessageError(()=> 'Please avoid numbers above 50 👁️')} else {setMessageError(()=>"")}
   }
+  
   /**
   *This function returns a toggle of a value that is false and true when it is triggered by the ButtonView component. 
   */
 
   function handleCardsView(){
     setToggleCards(!toggleCards) 
-    console.log(toggleCards)
+  
   }   
   /**
    * The array paginationItems and the for come from React-bootsrap. 
@@ -69,7 +69,6 @@ function CardsLogic() {
    /**
     * This function makes a fetch to the API stored in urlApi about a fabulous and popular magic card game. 
     * The data is stored in a state and it is used by the cardInfo Component.
-    * 
     */
     function callCards() {
       fetch(urlApi)
@@ -78,6 +77,7 @@ function CardsLogic() {
           setCards(data.data)
           })
       }
+      
     const handlePageNumber = (number) =>{
           setPageNumber(number)
           callCards()
@@ -92,16 +92,14 @@ function CardsLogic() {
         return () => {}
         },[urlApi])
 
-        
-
   return (
     <Container>
       <HeaderYugi />
-      <div className="d-flex justify-content-around" style={{height: '4%', marginTop: "7vh"}}> 
+         <div className="d-flex justify-content-around" style={{height: '4%', marginTop: "7vh"}}> 
         <NumberComponent numCards={handleInputChange}/>
         <Paginations pagItems={paginationItems}/>
-        <ButtonView cardsView={handleCardsView}  />
-      </div> 
+        <ButtonView cardsView={handleCardsView} />
+        </div> 
         <ErrorMessage error={messageError}/>  
         <Row>
         <CardsInfo allCards={cards} toggle={toggleCards}/>

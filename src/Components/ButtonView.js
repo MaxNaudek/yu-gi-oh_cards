@@ -8,7 +8,6 @@ import {  Button } from 'react-bootstrap/';
 function ButtonView({cardsView}) {
  
   return (
-    
         <Button variant="outline-primary" onClick={cardsView} style={{ fontSize: '3vh' }}> Change View</Button>
   )
 }
